@@ -1,4 +1,5 @@
 import os
+import random
 import sys
 import cloudscraper
 
@@ -8,6 +9,8 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import * 
 
 
+mined = []
+bet   = 5
 class Mines:
     def __init__(self, token, uiData) -> None:
         self.token   = token
@@ -24,8 +27,8 @@ class Mines:
     def createGame(self):
         try:
             json = {
-                'mines': '3',
-                'betAmount': 5,
+                'mines'    : '3',
+                'betAmount': bet,
             }
             response = self.session.post('https://api.bloxflip.com/games/mines/create', headers=Mines(self.token).headers(), json=json)
             if response.json()['success'] == False:
@@ -53,9 +56,14 @@ class Mines:
     def fmine(self):
         try:
             with self.session as session:
+                coord = random.randint(1,25)
+                if coord in mined:
+                    coord = random.randint(1,25)
+                else:
+                    mined.append(coord)
                 json = {
                     'cashout': False,
-                    'mine': 12,
+                    'mine': coord,
                 }
                 response = session.post('https://api.bloxflip.com/games/mines/action', headers=Mines(self.token).headers(), json=json)
                 print(response.text)
@@ -71,6 +79,11 @@ class Mines:
     def smine(self):
         try:
             with self.session as session:
+                coord = random.randint(1,25)
+                if coord in mined:
+                    coord = random.randint(1,25)
+                else:
+                    mined.append(coord)
                 json = {
                     'cashout': False,
                     'mine'   : 13,
@@ -79,7 +92,6 @@ class Mines:
                 if response.json()['success'] == True:
                     print("Second mine good")
                     self.uiData.consoleText.append('Mined a bomb should of cashed out smh')
-                    #print(f"Multipler: {round(response.json()['multiplier'], 2)}")
                     return True
                 else:
                     return False
