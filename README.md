@@ -4,4 +4,4 @@
 Unfinished Bloxflip auto mines
 
 
-[!Screenshot](preview.png)
+[Screenshot](preview.png)
