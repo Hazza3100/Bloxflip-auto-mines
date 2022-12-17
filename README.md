@@ -1,8 +1,9 @@
 # Unfinished Bloxflip auto mines
 
 
-Unfinished Bloxflip auto mines
+Unfinished Bloxflip auto mines.
 
+5-10 stars and I will finish it.
 
 ![Screenshot](preview.png)
 
