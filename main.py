@@ -259,7 +259,7 @@ class Ui_MainWindow(object):
     
     def start(self):
         token = self.tokenBox.text()
-        Mines(token, self).handle()
+        Mines(token, self).handle(self)
 
     def cash(self):
         token = self.tokenBox.text()
