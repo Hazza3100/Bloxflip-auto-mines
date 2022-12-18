@@ -1,6 +1,6 @@
 # Bloxflip Auto Mines
 
-Bloxflip auto mines.
+Script made for automating bloxflip mines.
 
 Open a issue for suggestions.
 
