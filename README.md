@@ -7,7 +7,7 @@ Unfinished Bloxflip auto mines.
 
 ![Screenshot](preview.png)
 
-![Video](https://streamable.com/jxc3m3)
+[![Watch the video](https://streamable.com/jxc3m3)
 
 ## Disclaimer
 I am not responsible for anything you do with this public release.
