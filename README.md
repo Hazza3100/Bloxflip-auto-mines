@@ -1,4 +1,4 @@
-# Bloxflip auto mines
+# Bloxflip Auto Mines
 
 Bloxflip auto mines.
 
