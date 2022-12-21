@@ -2,7 +2,7 @@
 
 Script made for automating bloxflip mines.
 
-Open a issue for suggestions.
+Qucik message: Yes its messy, will I remake it? no simply because I will never use this feel free to do so if you want : )
 
 ![Screenshot](preview.png)
 
